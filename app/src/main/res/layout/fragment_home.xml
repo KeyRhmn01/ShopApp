@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+     tools:context=".fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <ir.apend.slider.ui.Slider
+                android:id="@+id/picture"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200cdp"
+                android:layout_below="@id/nameD"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_20cdp"
+                android:animateLayoutChanges="true"
+                app:animateIndicators="true"
+                app:defaultIndicators="dash"
+                app:indicatorSize="8dp"
+                app:intervalSecond="5"
+                app:loopSlides="true"
+
+
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50cdp"
+                            android:layout_height="@dimen/_50cdp"
+                            android:layout_marginLeft="@dimen/_30cdp"
+                            android:layout_marginTop="@dimen/_10cdp"
+                            android:layout_marginRight="@dimen/_30cdp"
+                            android:layout_marginBottom="@dimen/_10cdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_50cdp"
+                            android:layout_height="@dimen/_50cdp"
+                            android:layout_marginLeft="@dimen/_30cdp"
+                            android:layout_marginTop="@dimen/_10cdp"
+                            android:layout_marginRight="@dimen/_30cdp"
+                            android:layout_marginBottom="@dimen/_10cdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_50cdp"
+                            android:layout_height="@dimen/_50cdp"
+                            android:layout_marginLeft="@dimen/_30cdp"
+                            android:layout_marginTop="@dimen/_10cdp"
+                            android:layout_marginRight="@dimen/_30cdp"
+                            android:layout_marginBottom="@dimen/_10cdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_50cdp"
+                            android:layout_height="@dimen/_50cdp"
+                            android:layout_marginLeft="@dimen/_30cdp"
+                            android:layout_marginTop="@dimen/_10cdp"
+                            android:layout_marginRight="@dimen/_30cdp"
+                            android:layout_marginBottom="@dimen/_10cdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_50cdp"
+                            android:layout_height="@dimen/_50cdp"
+                            android:layout_marginLeft="@dimen/_30cdp"
+                            android:layout_marginTop="@dimen/_10cdp"
+                            android:layout_marginRight="@dimen/_30cdp"
+                            android:layout_marginBottom="@dimen/_10cdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="پیشنهادات ویژه"
+                    android:textSize="@dimen/_20cdp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/_10cdp"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/_30cdp"
+                    android:layout_height="@dimen/_30cdp"
+                    android:src="@drawable/ic_baseline_read_more_24"
+                    android:layout_margin="@dimen/_10cdp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recH"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/pup"
+                    android:background="@color/main">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <com.bhargavms.dotloader.DotLoader
+                    android:id="@+id/text_dot_loader_H"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_100cdp"
+                    android:layout_centerInParent="true"
+                    app:color_array="@array/dot_colors"
+                    app:dot_radius="@dimen/_6cdp"
+                    app:number_of_dots="6" />
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/aa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="@dimen/_10cdp"
+                    android:layout_marginTop="@dimen/_10cdp"
+                    android:layout_marginEnd="@dimen/_10cdp"
+                    android:layout_marginBottom="@dimen/_10cdp"
+                    android:text="پر بازدید ترین ها"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20cdp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_30cdp"
+                    android:layout_height="@dimen/_30cdp"
+                    android:src="@drawable/ic_baseline_read_more_24"
+                    android:layout_margin="@dimen/_10cdp"
+                    />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/com"
+
+                    >
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rec"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            >
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70cdp"
+                            android:layout_below="@id/rec"
+
+
+                            >
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+
+                </androidx.core.widget.NestedScrollView>
+
+
+
+
+                <com.bhargavms.dotloader.DotLoader
+                    android:id="@+id/text_dot_loader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_100cdp"
+                    android:layout_centerInParent="true"
+                    app:color_array="@array/dot_colors"
+                    app:dot_radius="@dimen/_6cdp"
+                    app:number_of_dots="6" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E3E3E3"
+    tools:context=".activity.Login">
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_40cdp"
+        android:layout_marginRight="@dimen/_20cdp"
+        android:text="ورود"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_40cdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hello"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_20cdp"
+        android:text="سلام! لطفا حساب خود را وارد کنید:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20cdp"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a"
+        android:layout_marginStart="@dimen/_20cdp"
+        android:layout_marginTop="@dimen/_20cdp"
+        android:layout_marginEnd="@dimen/_20cdp"
+        android:layout_marginBottom="@dimen/_20cdp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/_10cdp"
+            android:layout_marginTop="@dimen/_10cdp"
+            android:layout_marginEnd="@dimen/_10cdp"
+            android:text="ایمیل یا شماره را وارد کنید:"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_20cdp" />
+
+        <EditText
+            android:id="@+id/entLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b"
+            android:layout_marginStart="@dimen/_10cdp"
+            android:layout_marginEnd="@dimen/_10cdp"
+            android:layout_marginBottom="@dimen/_10cdp"
+
+            android:background="#E3E3E3"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_25cdp" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/entLog"
+            android:layout_marginStart="@dimen/_10cdp"
+            android:layout_marginTop="@dimen/_10cdp"
+            android:layout_marginEnd="@dimen/_10cdp"
+            android:layout_marginBottom="@dimen/_10cdp"
+            android:background="#E3E3E3"
+            android:hint="رمز"
+            android:textColor="@color/black"
+            android:textColorHint="#5A5A5A"
+            android:textSize="@dimen/_25cdp" />
+
+        <TextView
+            android:id="@+id/rejister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20cdp"
+            android:layout_marginTop="@dimen/_20cdp"
+            android:layout_marginEnd="@dimen/_20cdp"
+            android:layout_marginBottom="@dimen/_20cdp"
+            android:text="اکانتی ندارید؟ ساخت اکانت"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_20cdp" />
+
+        <TextView
+            android:id="@+id/forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rejister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20cdp"
+            android:layout_marginTop="@dimen/_20cdp"
+            android:layout_marginEnd="@dimen/_20cdp"
+            android:layout_marginBottom="@dimen/_20cdp"
+            android:text="رمز را فراموش کردید؟"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_20cdp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50cdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_30cdp"
+        android:layout_marginTop="@dimen/_30cdp"
+        android:layout_marginEnd="@dimen/_30cdp"
+        android:layout_marginBottom="@dimen/_30cdp"
+
+        android:background="@drawable/corners"
+        android:gravity="center"
+        android:text="ورود"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30cdp">
+
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="@dimen/_30cdp"
+        android:layout_height="@dimen/_30cdp"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/_40cdp"
+        android:layout_marginRight="@dimen/_60cdp"
+        />
+
+
+
+
+
+
+</RelativeLayout>

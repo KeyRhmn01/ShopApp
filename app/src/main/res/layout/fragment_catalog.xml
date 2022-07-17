@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E3E3E3"
+    tools:context=".fragment.CatalogFragment">
+
+    <com.bhargavms.dotloader.DotLoader
+        android:id="@+id/text_dot_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_100cdp"
+        android:layout_centerInParent="true"
+        app:color_array="@array/dot_colors"
+        app:dot_radius="@dimen/_6cdp"
+
+        app:number_of_dots="6" />
+
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_30cdp"
+        android:layout_marginRight="@dimen/_20cdp"
+        android:text="به این دسته بندی ها سر بزنید"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25cdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_10cdp"
+        android:layout_marginRight="@dimen/_20cdp"
+        android:text="هرچیزی ک اراده کنید داریم"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15cdp" />
+
+
+    <LinearLayout
+        android:id="@+id/list_item1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b"
+        android:layout_marginStart="@dimen/_30cdp"
+        android:layout_marginTop="@dimen/_30cdp"
+        android:layout_marginEnd="@dimen/_30cdp"
+        android:layout_marginBottom="@dimen/_30cdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler"
+            >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

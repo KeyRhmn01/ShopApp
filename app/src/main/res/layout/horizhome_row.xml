@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_200cdp"
+    android:layout_height="430dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/puprow"
+        android:layout_margin="@dimen/_20cdp"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40cdp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/_20cdp" />
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180cdp"
+            android:layout_margin="@dimen/_10cdp"
+
+            android:layout_below="@id/title" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40cdp"
+            android:layout_below="@id/picture"
+            android:layout_marginStart="@dimen/_10cdp"
+            android:layout_marginEnd="@dimen/_10cdp"
+            android:layout_marginBottom="@dimen/_10cdp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:lines="2"
+            android:textColor="@color/black"
+
+            android:text="description"
+            android:textSize="@dimen/_15cdp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30cdp"
+            android:layout_below="@id/desc"
+            android:layout_marginStart="@dimen/_10cdp"
+            android:layout_marginTop="@dimen/_10cdp"
+            android:layout_marginEnd="@dimen/_10cdp"
+            android:layout_marginBottom="@dimen/_10cdp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:gravity="center"
+            android:text="20000"
+            android:textSize="@dimen/_15cdp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

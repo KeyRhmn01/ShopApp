@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.ProductsCat">
+
+    <com.bhargavms.dotloader.DotLoader
+        android:id="@+id/text_dot_loaderCat"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_100cdp"
+        android:layout_centerInParent="true"
+        app:color_array="@array/dot_colors"
+        app:dot_radius="@dimen/_6cdp"
+
+        app:number_of_dots="6" />
+
+    <RelativeLayout
+        android:id="@+id/aa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottoncorners"
+        android:padding="@dimen/_10cdp">
+
+        <TextView
+            android:id="@+id/textCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_40cdp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25cdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_30cdp"
+            android:layout_height="@dimen/_30cdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20cdp"
+            android:src="@drawable/ic_baseline_arrow_circle_left_24" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/aa"
+        android:layout_marginTop="@dimen/_5cdp">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

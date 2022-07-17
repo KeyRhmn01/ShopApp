@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.Home">
+
+
+    <RelativeLayout
+        android:id="@+id/aa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main"
+        android:padding="@dimen/_10cdp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10cdp"
+            android:text="فروشگاه"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25cdp"
+            android:textStyle="bold"
+
+            />
+
+        <ImageView
+            android:id="@+id/notif"
+            android:layout_width="@dimen/_30cdp"
+            android:layout_height="@dimen/_30cdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20cdp"
+            android:src="@drawable/ic_baseline_notifications_24" />
+
+
+    </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/aa"
+            >
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_margin="@dimen/_20cdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50cdp"
+                android:orientation="horizontal"
+                android:background="@drawable/backgrpond_menu"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:id="@+id/homee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageHome"
+                        android:layout_width="@dimen/_25cdp"
+                        android:layout_height="@dimen/_25cdp"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10cdp"
+                        android:src="@drawable/home"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/imageHomeb"
+                        android:layout_width="@dimen/_25cdp"
+                        android:layout_height="@dimen/_25cdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10cdp"
+                        android:src="@drawable/homeb"
+                        android:visibility="invisible"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/catalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageTicket"
+                        android:layout_width="@dimen/_25cdp"
+                        android:layout_height="@dimen/_25cdp"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10cdp"
+                        android:src="@drawable/ticket"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/imageTicketb"
+                        android:layout_width="@dimen/_25cdp"
+                        android:layout_height="@dimen/_25cdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10cdp"
+                        android:src="@drawable/ticketb"
+                        android:visibility="invisible"
+
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageProf"
+                        android:layout_width="@dimen/_25cdp"
+                        android:layout_height="@dimen/_25cdp"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10cdp"
+                        android:src="@drawable/profile"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/imageProfb"
+                        android:layout_width="@dimen/_25cdp"
+                        android:layout_height="@dimen/_25cdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10cdp"
+                        android:src="@drawable/profileb"
+                        android:visibility="invisible"
+
+                        />
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3E3E3"
+    tools:context=".fragment.ProfileFragment">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_30cdp"
+        android:layout_marginRight="@dimen/_20cdp"
+        android:text="کیانوش رحمانزایی"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_30cdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/countery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_10cdp"
+        android:layout_marginRight="@dimen/_20cdp"
+        android:text=" کشور، یه جایی از کشور"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15cdp" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/countery"
+        android:layout_margin="@dimen/_30cdp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/cartBut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10cdp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:layout_toLeftOf="@id/cart"
+                android:text="سبد خرید"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_25cdp" />
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_width="@dimen/_30cdp"
+                android:layout_height="@dimen/_30cdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:src="@drawable/ic_baseline_add_shopping_cart_24" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray"
+            />
+
+        <RelativeLayout
+            android:id="@+id/wishListClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10cdp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:layout_toLeftOf="@id/wishList"
+                android:text="ذخیره ها"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_25cdp" />
+
+            <ImageView
+                android:id="@+id/wishList"
+                android:layout_width="@dimen/_30cdp"
+                android:layout_height="@dimen/_30cdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:src="@drawable/ic_baseline_star_24" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10cdp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:layout_toLeftOf="@id/orders"
+                android:text="سفارشات"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_25cdp" />
+
+            <ImageView
+                android:id="@+id/orders"
+                android:layout_width="@dimen/_30cdp"
+                android:layout_height="@dimen/_30cdp"
+                android:src="@drawable/ic_baseline_assignment_24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20cdp"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10cdp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:layout_toLeftOf="@id/offers"
+                android:text="تخفیف ها"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_25cdp" />
+
+            <ImageView
+                android:id="@+id/offers"
+                android:layout_width="@dimen/_30cdp"
+                android:layout_height="@dimen/_30cdp"
+                android:src="@drawable/ic_baseline_card_giftcard_24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20cdp"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10cdp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:layout_toLeftOf="@id/copons"
+                android:text="کپن ها"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_25cdp" />
+
+            <ImageView
+                android:id="@+id/copons"
+                android:layout_width="@dimen/_30cdp"
+                android:layout_height="@dimen/_30cdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:src="@drawable/ticket"
+                app:tint="@color/gray" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/list"
+        android:layout_margin="@dimen/_30cdp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/profiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10cdp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:layout_toLeftOf="@id/profe"
+                android:text="پروفایل"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_25cdp" />
+
+            <ImageView
+                android:id="@+id/profe"
+                android:layout_width="@dimen/_30cdp"
+                android:layout_height="@dimen/_30cdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:src="@drawable/profile"
+                app:tint="@color/gray" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/gray"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10cdp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:layout_toLeftOf="@id/setings"
+                android:text="تنظیمات"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_25cdp" />
+
+            <ImageView
+                android:id="@+id/setings"
+                android:layout_width="@dimen/_30cdp"
+                android:layout_height="@dimen/_30cdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20cdp"
+                android:src="@drawable/ic_baseline_settings_24" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
