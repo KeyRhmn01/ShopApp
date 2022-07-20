@@ -113,7 +113,7 @@ public class ProductsCat extends AppCompatActivity {
                         JSONObject imageObject = imagearray.getJSONObject(0);
                         Products products = new Products();
                         products.name = data.getString("name");
-                        products.price = data.getString("price" )+" تومان ";
+                        products.price = data.getString("price" );
                         products.img1 = imageObject.getString("src");
                         products.description = android.text.Html.fromHtml(data.getString("short_description")).toString();
                         products.id = data.getInt("id");

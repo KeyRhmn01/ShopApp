@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,18 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
     List<Products> pr;
     Context context;
     Activity activity;
+    int count;
+    String a;
+    String price;
+    String tprice;
+
+
+
+
+
+
+
+
 
     public CartAdapter(Activity activity, ArrayList<Products> pr) {
         this.pr = pr;
@@ -50,10 +63,21 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
     @Override
     public void onBindViewHolder(@NonNull CartAdapter.MyView holder, @SuppressLint("RecyclerView") int position) {
 
+
         holder.name.setText(pr.get(position).name);
         holder.price.setText(pr.get(position).price);
+        holder.tprice.setText(pr.get(position).tPrice);
         Picasso.get().load(pr.get(position).img1).into(holder.avatar);
         holder.dit.setText(pr.get(position).description);
+        holder.numb.setText(String.valueOf(pr.get(position).count));
+
+
+
+
+
+
+
+
 
         holder.remove.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +85,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
 
                 SqlCards sqlCards = new SqlCards(context);
                 int id = pr.get(position).id;
+
                 sqlCards.delete(id);
                 Toast.makeText(context, pr.get(position).name + "  باموفقیت حذف شد(;", Toast.LENGTH_SHORT).show();
                 ((Cart)activity).hi();
@@ -78,11 +103,58 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
             }
         });
 
+
+
+        count = pr.get(position).count;
+        tprice = pr.get(position).tPrice;
         holder.plus.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceType")
             @Override
             public void onClick(View view) {
-                Products products = new Products();
+                SqlCards sqlCards = new SqlCards(context);
+                int id = pr.get(position).id;
+                String name = pr.get(position).name;
+                String price =pr.get(position).price;
+                String dit = pr.get(position).description;
+                holder.numb.setText(String.valueOf(count));
+                count++ ;
+                holder.numb.setText(String.valueOf(count));
+                int result = Integer.valueOf(pr.get(position).price)*count;
+                holder.tprice.setText(String.valueOf(result));
+
+                sqlCards.getById(id);
+                sqlCards.updateCourse(id, name, dit, count, price, String.valueOf(result));
+            }
+        });
+
+        holder.neg.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceType")
+            @Override
+            public void onClick(View view) {
+                SqlCards sqlCards = new SqlCards(context);
+                int id = pr.get(position).id;
+                String name = pr.get(position).name;
+                String price =pr.get(position).price;
+                String dit = pr.get(position).description;
+                String tprice= pr.get(position).price;
+                holder.numb.setText(String.valueOf(count));
+                count--;
+                holder.numb.setText(String.valueOf(count));
+
+
+                sqlCards.getById(id);
+
+                sqlCards.updateCourse(id, name, dit, count, price, tprice);
+
+                int result = Integer.valueOf(pr.get(position).price)*count;
+                holder.tprice.setText(String.valueOf(result));
+
+                if(count == 0){
+                    sqlCards.delete(id);
+                    Toast.makeText(context, pr.get(position).name + "  باموفقیت حذف شد(;", Toast.LENGTH_SHORT).show();
+                    ((Cart)activity).hi();
+                }
+
                 //not finished
             }
         });
@@ -102,9 +174,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
         public TextView dit;
         public Button remove;
         public RelativeLayout relativeLayout;
-        public ImageView plus;
+        public LinearLayout plus;
         public ImageView neg;
         public TextView numb;
+        public TextView tprice;
 
         public MyView(@NonNull View itemView) {
             super(itemView);
@@ -118,7 +191,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
             plus = itemView.findViewById(R.id.plus);
             neg = itemView.findViewById(R.id.neg);
             numb = itemView.findViewById(R.id.number);
-
+            tprice = itemView.findViewById(R.id.tPriceCart);
 
         }
     }

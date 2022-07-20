@@ -22,9 +22,9 @@
             android:layout_width="@dimen/_60cdp"
             android:layout_height="@dimen/_120cdp"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="@dimen/_20cdp"
+            android:layout_marginLeft="@dimen/_20cdp"
             android:layout_marginTop="@dimen/_20cdp"
-            android:layout_marginEnd="@dimen/_20cdp"
+            android:layout_marginRight="@dimen/_20cdp"
             android:layout_marginBottom="@dimen/_20cdp" />
 
         <TextView
@@ -44,9 +44,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/titleCart"
+            android:layout_marginLeft="@dimen/_30cdp"
             android:layout_marginTop="@dimen/_10cdp"
-            android:layout_marginRight="@dimen/_20cdp"
             android:layout_toLeftOf="@id/pic"
+            android:layout_toRightOf="@id/remove"
             android:text="560000"
             android:textColor="@color/main"
             android:textSize="@dimen/_12cdp"
@@ -54,12 +55,12 @@
 
         <TextView
             android:id="@+id/descCart"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_120cdp"
             android:layout_height="wrap_content"
             android:layout_below="@id/priceCart"
-            android:layout_marginStart="@dimen/_20cdp"
+            android:layout_marginLeft="@dimen/_20cdp"
             android:layout_marginTop="@dimen/_20cdp"
-            android:layout_marginEnd="@dimen/_20cdp"
+            android:layout_marginRight="@dimen/_20cdp"
             android:layout_marginBottom="@dimen/_20cdp"
             android:layout_toLeftOf="@id/pic"
             android:ellipsize="end"
@@ -69,8 +70,8 @@
 
         <LinearLayout
             android:id="@+id/aa"
-            android:layout_width="@dimen/_60cdp"
-            android:layout_height="@dimen/_20cdp"
+            android:layout_width="@dimen/_80cdp"
+            android:layout_height="@dimen/_40cdp"
             android:layout_marginLeft="@dimen/_20cdp"
             android:layout_marginTop="@dimen/_20cdp"
             android:background="@drawable/corners"
@@ -104,7 +105,6 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:inputType="number"
-                    android:text="0"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10cdp" />
 
@@ -112,12 +112,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/plus"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/plus"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_4cdp"
@@ -139,6 +140,20 @@
             android:background="@drawable/corners"
             android:text="حذف"
             android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tPriceCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remove"
+            android:layout_marginLeft="@dimen/_30cdp"
+            android:layout_marginTop="@dimen/_15cdp"
+
+
+            android:text="560000"
+            android:textColor="@color/main"
+            android:textSize="@dimen/_12cdp"
             android:textStyle="bold" />
 
 

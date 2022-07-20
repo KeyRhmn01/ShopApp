@@ -11,7 +11,8 @@ public class Products extends SugarRecord {
     public String img2;
     public String img3;
     public String description;
-
+    public int count =1;
+    public String tPrice;
 
 
 
@@ -25,11 +26,22 @@ public class Products extends SugarRecord {
 
     }
 
+    public Products(int id, String name, String price, String description, int count, String tprice) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.count = count;
+        this.tPrice = tprice;
+
+    }
+
     public Products(int id, String name, String price, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+
     }
 
     public void setId(int id) {

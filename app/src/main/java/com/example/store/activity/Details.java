@@ -75,7 +75,7 @@ public class Details extends AppCompatActivity {
                 }
 
 
-                sqlCards.Insert(products.id, products.name, products.description, products.price);
+                sqlCards.Insert(products.id, products.name, products.description, products.count, products.price ,products.price);
                 ArrayList<Products> productslist = sqlCards.getData();
                 productslist = sqlCards.getData();
 
@@ -184,7 +184,7 @@ public class Details extends AppCompatActivity {
                                     getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
                             products.name = data.getString("name");
                             products.description = android.text.Html.fromHtml(data.getString("short_description")).toString();
-                            products.price = data.getString("price") + " تومان ";
+                            products.price = data.getString("price");
                             ;
                             DotLoader dotLoader = findViewById(R.id.text_dot_loader);
                             dotLoader.setVisibility(View.GONE);
