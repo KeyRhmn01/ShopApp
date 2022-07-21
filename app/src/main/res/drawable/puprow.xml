@@ -11,7 +11,7 @@
                 android:width="@dimen/_2cdp"
                 />
             <corners
-                android:radius="@dimen/_20cdp"
+                android:radius="@dimen/_10cdp"
                 />
             <solid
                 android:color="@color/white"

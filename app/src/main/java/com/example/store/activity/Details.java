@@ -75,7 +75,7 @@ public class Details extends AppCompatActivity {
                 }
 
 
-                sqlCards.Insert(products.id, products.name, products.description, products.count, products.price ,products.price);
+                sqlCards.Insert(products.id, products.name, products.description, products.count, products.price ,products.price, products.img1);
                 ArrayList<Products> productslist = sqlCards.getData();
                 productslist = sqlCards.getData();
 
@@ -95,7 +95,7 @@ public class Details extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                sqlDatabase.Insert(products.id, products.name, products.description, products.price);
+                sqlDatabase.Insert(products.id, products.name, products.description, products.price, products.img1);
                 ArrayList<Products> productslist = sqlDatabase.getData();
                 productslist = sqlDatabase.getData();
                 star.setVisibility(View.VISIBLE);

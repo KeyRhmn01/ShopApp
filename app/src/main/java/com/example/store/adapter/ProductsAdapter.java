@@ -35,7 +35,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.MyView
     @Override
     public ProductsAdapter.MyView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
-        View itemview = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_row, parent, false);
+        View itemview = LayoutInflater.from(parent.getContext()).inflate(R.layout.products_home_row, parent, false);
         return new MyView(itemview);
     }
 
@@ -84,6 +84,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.MyView
                 avatar = itemView.findViewById(R.id.aks);
                 layout = itemView.findViewById(R.id.clickRelative);
                 dit = itemView.findViewById(R.id.details);
+                layout = itemView.findViewById(R.id.clickRelative);
 
 
             }

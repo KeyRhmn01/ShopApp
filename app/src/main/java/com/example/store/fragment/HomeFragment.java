@@ -4,6 +4,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
@@ -23,9 +24,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.store.R;
+import com.example.store.activity.Cart;
+import com.example.store.activity.ProductsCat;
+import com.example.store.activity.Saves;
 import com.example.store.adapter.ProductsAdapter;
 import com.example.store.adapter.PupulerAdapter;
 import com.example.store.databinding.FragmentHomeBinding;
+import com.example.store.model.Categories;
 import com.example.store.model.Products;
 
 import org.json.JSONArray;
@@ -43,63 +48,22 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class HomeFragment extends Fragment {
 
     Context context;
     private FragmentHomeBinding binding;
     PupulerAdapter adapterP;
-
+    Categories categories = new Categories();
     ArrayList<Products> product = new ArrayList<>();
     ProductsAdapter adapter;
+    int id ;
+    String lable;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-
-
-
-
 
     }
 
@@ -113,15 +77,15 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
 
         //Slider slider = findViewById(R.id.picture);
-//create list of slides
+        //create list of slides
 
         Drawable drawable = getResources().getDrawable(R.drawable.baner);
 
         List<Slide> slideList = new ArrayList<>();
-        slideList.add(new Slide(0,"https://znoonstyle.com/wp-content/uploads/2021/09/Screenshot-20.png" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
-        slideList.add(new Slide(1,"http://cssslider.com/sliders/demo-12/data1/images/picjumbo.com_hnck1995.jpg" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
-        slideList.add(new Slide(2,"http://cssslider.com/sliders/demo-19/data1/images/picjumbo.com_hnck1588.jpg" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
-        slideList.add(new Slide(3,"http://wowslider.com/sliders/demo-18/data1/images/shanghai.jpg" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
+        slideList.add(new Slide(0,"https://dkstatics-public.digikala.com/digikala-adservice-banners/f34f896372f524e487c9f8f7717eb0dd583e3fb3_1657989351.gif" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
+        slideList.add(new Slide(1,"https://dkstatics-public.digikala.com/digikala-adservice-banners/88d1043787fbd90a394ee0b41f65b3a80279f8f5_1656704493.jpg?x-oss-process=image/quality,q_95" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
+        slideList.add(new Slide(2,"https://dkstatics-public.digikala.com/digikala-adservice-banners/e280286fe6a9d0233b36a2eabd101c50992fae4d_1658336306.jpg?x-oss-process=image/quality,q_95" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
+        slideList.add(new Slide(3,"https://dkstatics-public.digikala.com/digikala-adservice-banners/131a7d53b027360d66c80903357ba14432c5ea1e_1656677786.jpg?x-oss-process=image/quality,q_95" , getResources().getDimensionPixelSize(R.dimen.slider_image_corner)));
 
 //handle slider click listener
         binding.picture.setItemClickListener(new AdapterView.OnItemClickListener() {
@@ -148,20 +112,47 @@ public class HomeFragment extends Fragment {
         adapterP = new PupulerAdapter(product);
         binding.recH.setAdapter(adapterP);
 
-
-
-/*        binding.swp.setColorSchemeResources(R.color.main);
-        binding.swp.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+        binding.buttonA.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onRefresh() {
-                binding.swp.setRefreshing(false);
-                new Refresh().execute();
+            public void onClick(View view) {
 
-
+                lable = "پوشاک زنانه";
+                id = 79;
+                Intent intent = new Intent(context, ProductsCat.class);
+                intent.putExtra("id" , id);
+                intent.putExtra("label", lable);
+                context.startActivity(intent);
             }
-        });*/
+        });
 
+        binding.buttonB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                lable = "پیراهن مجلسی";
+                id = 80;
+                Intent intent = new Intent(context, ProductsCat.class);
+                intent.putExtra("id" , id);
+                intent.putExtra("label", lable);
+                context.startActivity(intent);
+            }
+        });
+
+        binding.buttonC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Cart.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.buttonD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Saves.class);
+                startActivity(intent);
+            }
+        });
 
 
         new Refresh().execute();
@@ -228,11 +219,6 @@ public class HomeFragment extends Fragment {
                         binding.textDotLoaderH.setVisibility(View.GONE);
                         binding.textDotLoader.setVisibility(View.GONE);
                     }
-
-
-
-
-
 
                     adapter.notifyDataSetChanged();
                     adapterP.notifyDataSetChanged();

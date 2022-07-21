@@ -116,6 +116,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
                 String name = pr.get(position).name;
                 String price =pr.get(position).price;
                 String dit = pr.get(position).description;
+                String avatar = pr.get(position).img1;
                 holder.numb.setText(String.valueOf(count));
                 count++ ;
                 holder.numb.setText(String.valueOf(count));
@@ -123,7 +124,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
                 holder.tprice.setText(String.valueOf(result));
 
                 sqlCards.getById(id);
-                sqlCards.updateCourse(id, name, dit, count, price, String.valueOf(result));
+                sqlCards.updateCourse(id, name, dit, count, price, String.valueOf(result), avatar);
             }
         });
 
@@ -137,6 +138,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
                 String price =pr.get(position).price;
                 String dit = pr.get(position).description;
                 String tprice= pr.get(position).price;
+                String avatar = pr.get(position).img1;
                 holder.numb.setText(String.valueOf(count));
                 count--;
                 holder.numb.setText(String.valueOf(count));
@@ -144,7 +146,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyView>{
 
                 sqlCards.getById(id);
 
-                sqlCards.updateCourse(id, name, dit, count, price, tprice);
+                sqlCards.updateCourse(id, name, dit, count, price, tprice ,avatar);
 
                 int result = Integer.valueOf(pr.get(position).price)*count;
                 holder.tprice.setText(String.valueOf(result));

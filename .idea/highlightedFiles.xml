@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectTreeColorHighlighter">
-    <files />
+    <files>
+      <node color="1" path="$PROJECT_DIR$/app/src/main/java/com/example/store" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/java/com/example/store/activity" />
+      <node color="3" path="$PROJECT_DIR$/app/src/main/java/com/example/store/adapter" />
+      <node color="6" path="$PROJECT_DIR$/app/src/main/java/com/example/store/database" />
+      <node color="4" path="$PROJECT_DIR$/app/src/main/java/com/example/store/fragment" />
+      <node color="7" path="$PROJECT_DIR$/app/src/main/java/com/example/store/model" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_cart.xml" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_details.xml" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_products_cat.xml" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
+      <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_saves.xml" />
+      <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/cart_row.xml" />
+      <node color="4" path="$PROJECT_DIR$/app/src/main/res/layout/fragment_catalog.xml" />
+      <node color="4" path="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+      <node color="4" path="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" />
+      <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/horizhome_row.xml" />
+      <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/list_row.xml" />
+      <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/mytextview.xml" />
+      <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/products_home_row.xml" />
+    </files>
     <colors>
       <color id="1" value="#4f060d" name="Color 1" enabled="true" />
       <color id="2" value="#44220e" name="Color 2" enabled="true" />

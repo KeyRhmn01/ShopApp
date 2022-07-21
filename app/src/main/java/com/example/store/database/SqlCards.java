@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class SqlCards extends SQLiteOpenHelper {
 
     String TABLE_NAME = "CARDS";
+    String tprice;
 
 
     public SqlCards(@Nullable Context context) {
@@ -31,7 +32,8 @@ public class SqlCards extends SQLiteOpenHelper {
                 " description TEXT , " +
                 " count INTERGER DEFAULT 1 , " +
                 " price TXT , " +
-                " tprice TXT)");
+                " tprice TXT , " +
+                " image TXT)");
 
     }
 
@@ -51,7 +53,7 @@ public class SqlCards extends SQLiteOpenHelper {
 
 
     // below is the method for updating our courses
-    public void updateCourse(Integer id, String name, String descripsion, Integer count, String price, String tprice) {
+    public void updateCourse(Integer id, String name, String descripsion, Integer count, String price, String tprice, String image) {
 
         // calling a method to get writable database.
         SQLiteDatabase db = this.getWritableDatabase();
@@ -62,6 +64,8 @@ public class SqlCards extends SQLiteOpenHelper {
         contentValues.put("count", count );
         contentValues.put("price", price);
         contentValues.put("tprice" , tprice);
+        contentValues.put("image" , image);
+
 
         // on below line we are calling a update method to update our database and passing our values.
         // and we are comparing it with name of our course which is stored in original name variable.
@@ -70,7 +74,7 @@ public class SqlCards extends SQLiteOpenHelper {
     }
 
     //INSERT
-    public void Insert(Integer id, String name, String descripsion, Integer count, String price, String tprice) {
+    public void Insert(Integer id, String name, String descripsion, Integer count, String price, String tprice, String image) {
 
         SQLiteDatabase database = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -80,9 +84,20 @@ public class SqlCards extends SQLiteOpenHelper {
         contentValues.put("count", count );
         contentValues.put("price", price);
         contentValues.put("tprice" , tprice);
+        contentValues.put("image" , image);
+
+
         database.insert(TABLE_NAME, null, contentValues);
 
     }
+
+/*    public String getByTotal(String tprice){
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("Select SUM(tprice) from CARDS", null);
+        c.close();
+
+        return (tprice);
+    }*/
 
     //SELECT
     public ArrayList<Products> getData(){
@@ -99,10 +114,12 @@ public class SqlCards extends SQLiteOpenHelper {
                 int count = c.getInt(3);
                 String price = c.getString(4);
                 String tprice = c.getString(5);
+                String image = c.getString(6);
 
 
 
-                Products product = new Products(id,name,price,desc,count,tprice);
+
+                Products product = new Products(id,name,price,desc,count,tprice,image);
                 productsList.add(product);
 
                 // Do something Here with values

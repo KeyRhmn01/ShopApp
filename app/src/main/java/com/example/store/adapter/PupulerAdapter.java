@@ -1,6 +1,8 @@
 package com.example.store.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.store.R;
+import com.example.store.activity.Details;
 import com.example.store.model.Products;
 import com.squareup.picasso.Picasso;
 
@@ -36,12 +39,22 @@ public class PupulerAdapter extends RecyclerView.Adapter<PupulerAdapter.MyView> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PupulerAdapter.MyView holder, int position) {
+    public void onBindViewHolder(@NonNull PupulerAdapter.MyView holder, @SuppressLint("RecyclerView") int position) {
 
         holder.name.setText(pr.get(position).name);
         holder.price.setText(pr.get(position).price);
         Picasso.get().load(pr.get(position).img1).into(holder.avatar);
         holder.dit.setText(pr.get(position).description);
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Details.class);
+                intent.putExtra("id", pr.get(position).id);
+                context.startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -66,6 +79,7 @@ public class PupulerAdapter extends RecyclerView.Adapter<PupulerAdapter.MyView> 
             price = itemView.findViewById(R.id.price);
             avatar = itemView.findViewById(R.id.picture);
             dit = itemView.findViewById(R.id.desc);
+            layout = itemView.findViewById(R.id.layouta);
 
 
         }

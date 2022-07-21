@@ -97,7 +97,7 @@ public class Saves extends AppCompatActivity {
             }
         });
 
-        //SqLite and Recycler
+        //SqLite and Recycler and adapter
         SqlDatabase sqlDatabase = new SqlDatabase(Saves.this);
         ArrayList<Products> productslist = sqlDatabase.getData();
         LinearLayoutManager verticalLayoutManager = new LinearLayoutManager(Saves.this,
@@ -187,5 +187,5 @@ public class Saves extends AppCompatActivity {
     }
 
 
-    
+
 }

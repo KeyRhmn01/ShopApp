@@ -30,7 +30,8 @@ public class SqlDatabase extends SQLiteOpenHelper {
                 "(ida INTEGER PRIMARY KEY , " +
                 " name TEXT  , " +
                 " descripsion TEXT  , " +
-                " price TEXT )" );
+                " price TEXT , " +
+                " image TXT)" );
 
     }
 
@@ -52,7 +53,8 @@ public class SqlDatabase extends SQLiteOpenHelper {
                 String name = c.getString(1);
                 String desc = c.getString(2);
                 String price = c.getString(3);
-                Products product = new Products(id,name,price,desc);
+                String image = c.getString(4);
+                Products product = new Products(id,name,price,desc, image);
                 productsList.add(product);
 
                 // Do something Here with values
@@ -88,7 +90,7 @@ public class SqlDatabase extends SQLiteOpenHelper {
     }
 
     //INSERT
-    public void Insert(Integer ida, String name, String descripsion, String price) {
+    public void Insert(Integer ida, String name, String descripsion, String price, String image) {
 
         SQLiteDatabase database = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -96,6 +98,7 @@ public class SqlDatabase extends SQLiteOpenHelper {
         contentValues.put("name", name);
         contentValues.put("descripsion", descripsion);
         contentValues.put("price", price);
+        contentValues.put("image" , image);
         database.insert(TABLE_NAME, null, contentValues);
 
     }

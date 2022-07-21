@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     >
 
@@ -17,27 +18,42 @@
         android:layout_marginBottom="@dimen/_20cdp"
         android:background="@drawable/background_cart">
 
-        <ImageView
-            android:id="@+id/pic"
-            android:layout_width="@dimen/_60cdp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carty"
+            android:layout_width="@dimen/_80cdp"
             android:layout_height="@dimen/_120cdp"
+
             android:layout_alignParentRight="true"
             android:layout_marginLeft="@dimen/_20cdp"
             android:layout_marginTop="@dimen/_20cdp"
             android:layout_marginRight="@dimen/_20cdp"
-            android:layout_marginBottom="@dimen/_20cdp" />
+            android:layout_marginBottom="@dimen/_20cdp"
+            app:cardCornerRadius="@dimen/_5cdp">
+
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="@dimen/_80cdp"
+                android:layout_height="@dimen/_120cdp"
+                android:scaleType="centerCrop"
+
+
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
 
         <TextView
             android:id="@+id/titleCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20cdp"
-            android:layout_marginRight="@dimen/_20cdp"
-            android:layout_toLeftOf="@id/pic"
+            android:layout_marginRight="@dimen/_10cdp"
+            android:layout_toLeftOf="@id/carty"
             android:text="Spring collection"
             android:textColor="@color/black"
             android:textSize="@dimen/_15cdp"
-            android:textStyle="italic" />
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/priceCart"
@@ -46,7 +62,7 @@
             android:layout_below="@id/titleCart"
             android:layout_marginLeft="@dimen/_30cdp"
             android:layout_marginTop="@dimen/_10cdp"
-            android:layout_toLeftOf="@id/pic"
+            android:layout_toLeftOf="@id/carty"
             android:layout_toRightOf="@id/remove"
             android:text="560000"
             android:textColor="@color/main"
@@ -58,11 +74,11 @@
             android:layout_width="@dimen/_120cdp"
             android:layout_height="wrap_content"
             android:layout_below="@id/priceCart"
-            android:layout_marginLeft="@dimen/_20cdp"
+            android:layout_marginLeft="@dimen/_15cdp"
             android:layout_marginTop="@dimen/_20cdp"
-            android:layout_marginRight="@dimen/_20cdp"
+            android:layout_marginRight="@dimen/_15cdp"
             android:layout_marginBottom="@dimen/_20cdp"
-            android:layout_toLeftOf="@id/pic"
+            android:layout_toLeftOf="@id/carty"
             android:ellipsize="end"
             android:lines="3"
             android:textColor="@color/black"
@@ -70,8 +86,8 @@
 
         <LinearLayout
             android:id="@+id/aa"
-            android:layout_width="@dimen/_80cdp"
-            android:layout_height="@dimen/_40cdp"
+            android:layout_width="@dimen/_60cdp"
+            android:layout_height="@dimen/_30cdp"
             android:layout_marginLeft="@dimen/_20cdp"
             android:layout_marginTop="@dimen/_20cdp"
             android:background="@drawable/corners"
@@ -135,7 +151,7 @@
             android:layout_width="@dimen/_60cdp"
             android:layout_height="@dimen/_30cdp"
             android:layout_below="@id/aa"
-            android:layout_marginLeft="@dimen/_22cdp"
+            android:layout_marginLeft="@dimen/_20cdp"
             android:layout_marginTop="@dimen/_5cdp"
             android:background="@drawable/corners"
             android:text="حذف"
@@ -147,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/remove"
-            android:layout_marginLeft="@dimen/_30cdp"
+            android:layout_marginLeft="@dimen/_20cdp"
             android:layout_marginTop="@dimen/_15cdp"
 
 

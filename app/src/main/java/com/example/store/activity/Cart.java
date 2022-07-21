@@ -5,10 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.annotation.SuppressLint;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.store.R;
 import com.example.store.adapter.CartAdapter;
@@ -36,13 +40,16 @@ public class Cart extends AppCompatActivity {
     ArrayList<Products> product = new ArrayList<>();
     CartAdapter adapter;
     int id;
+    String tprice;
 
+    @SuppressLint("Range")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
         RecyclerView rec = findViewById(R.id.recCart);
         ImageView bak = findViewById(R.id.back);
+        TextView total = findViewById(R.id.tootal);
 
         bak.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +67,6 @@ public class Cart extends AppCompatActivity {
         adapter = new CartAdapter(this,productslist);
         rec.setAdapter(adapter);
         new Refresh().execute();
-
 
     }
 

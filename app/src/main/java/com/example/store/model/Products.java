@@ -14,8 +14,13 @@ public class Products extends SugarRecord {
     public int count =1;
     public String tPrice;
 
+    public String gettPrice() {
+        return tPrice;
+    }
 
-
+    public void settPrice(String tPrice) {
+        this.tPrice = tPrice;
+    }
 
     public Products() {
 
@@ -26,21 +31,24 @@ public class Products extends SugarRecord {
 
     }
 
-    public Products(int id, String name, String price, String description, int count, String tprice) {
+    public Products(int id, String name, String price, String description, int count, String tprice, String image) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
         this.count = count;
         this.tPrice = tprice;
+        this.img1= image;
+
 
     }
 
-    public Products(int id, String name, String price, String description) {
+    public Products(int id, String name, String price, String description , String image) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+        this.img1= image;
 
     }
 

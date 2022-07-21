@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50cdp"
                 android:orientation="horizontal"
-                android:background="@drawable/backgrpond_menu"
+                android:background="@drawable/background_cart"
                 android:layout_alignParentBottom="true">
 
                 <RelativeLayout
