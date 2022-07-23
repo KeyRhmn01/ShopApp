@@ -17,7 +17,9 @@
       <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
       <node color="5" path="$PROJECT_DIR$/app/src/main/res/layout/activity_saves.xml" />
       <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/cart_row.xml" />
+      <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/comments_row.xml" />
       <node color="4" path="$PROJECT_DIR$/app/src/main/res/layout/fragment_catalog.xml" />
+      <node color="4" path="$PROJECT_DIR$/app/src/main/res/layout/fragment_comments.xml" />
       <node color="4" path="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
       <node color="4" path="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" />
       <node color="7" path="$PROJECT_DIR$/app/src/main/res/layout/horizhome_row.xml" />

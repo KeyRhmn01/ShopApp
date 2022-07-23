@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_transparent_50"
+    android:id="@+id/backGround"
+    android:visibility="invisible"
+    android:clickable="true"
+    tools:context=".fragment.CommentsFragment">
+
+    <RelativeLayout
+        android:id="@+id/parentt"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_5cdp"
+        android:layout_marginRight="@dimen/_5cdp"
+        android:background="@drawable/corner_top"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30cdp"
+            android:layout_marginTop="@dimen/_30cdp"
+            android:layout_marginEnd="@dimen/_30cdp"
+            android:layout_marginBottom="@dimen/_30cdp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/_100cdp"
+            android:layout_height="@dimen/_50cdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_30cdp"
+            android:background="@drawable/white_corners_main"
+            android:text="کامنت جدید"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15cdp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

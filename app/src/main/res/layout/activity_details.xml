@@ -11,199 +11,204 @@
     android:orientation="vertical"
     tools:context=".activity.Details">
 
-    <com.bhargavms.dotloader.DotLoader
-        android:id="@+id/text_dot_loader"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_100cdp"
-        android:layout_centerInParent="true"
-        android:visibility="visible"
-        app:color_array="@array/dot_colors"
-        app:dot_radius="@dimen/_6cdp"
-        app:number_of_dots="6" />
-
-
-    <RelativeLayout
-        android:id="@+id/v"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible">
 
 
 
 
-        <ImageView
-            android:id="@+id/back"
-            android:layout_width="@dimen/_40cdp"
-            android:layout_height="@dimen/_40cdp"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="@dimen/_50cdp"
-            android:layout_marginTop="@dimen/_50cdp"
-            android:background="@drawable/circle"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
-
-        <ImageView
-            android:id="@+id/star"
-            android:layout_width="@dimen/_40cdp"
-            android:layout_height="@dimen/_40cdp"
-
-            android:layout_below="@+id/back"
-            android:layout_marginLeft="@dimen/_50cdp"
-            android:layout_marginTop="@dimen/_50cdp"
-
-            android:background="@drawable/circle"
-            android:src="@drawable/ic_baseline_star_24"
-            android:visibility="invisible" />
-
-        <ImageView
-            android:id="@+id/emptyStar"
-            android:layout_width="@dimen/_40cdp"
-            android:layout_height="@dimen/_40cdp"
-
-            android:layout_below="@+id/back"
-            android:layout_marginLeft="@dimen/_50cdp"
-            android:layout_marginTop="@dimen/_50cdp"
-
-            android:background="@drawable/circle"
-            android:src="@drawable/ic_baseline_star_border_24"
-            android:visibility="invisible"
 
 
-            />
 
 
-        <ir.apend.slider.ui.Slider
-            android:id="@+id/picture"
-            android:layout_width="@dimen/_200cdp"
-            android:layout_height="@dimen/_300cdp"
-            android:layout_below="@id/nameD"
-            android:layout_alignParentRight="true"
-
-            android:animateLayoutChanges="true"
-            app:animateIndicators="true"
-            app:defaultIndicators="dash"
-            app:indicatorSize="8dp"
-            app:intervalSecond="5"
-            app:loopSlides="true"
-
-
-            />
-
-        <TextView
-            android:id="@+id/nameD"
-            android:layout_width="@dimen/_200cdp"
-            android:layout_height="@dimen/_50cdp"
-            android:layout_alignParentRight="true"
-
-            android:background="@color/main"
-            android:gravity="center"
-            android:text="Titles"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_25cdp"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/priceD"
+        <com.bhargavms.dotloader.DotLoader
+            android:id="@+id/text_dot_loader"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/picture"
-            android:layout_marginLeft="@dimen/_30cdp"
-            android:layout_marginTop="@dimen/_10cdp"
-            android:layout_marginRight="@dimen/_30cdp"
-            android:background="@color/main"
-            android:padding="@dimen/_5cdp"
-            android:text="Price"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_30cdp"
-            android:textStyle="bold" />
+            android:layout_height="@dimen/_100cdp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:color_array="@array/dot_colors"
+            app:dot_radius="@dimen/_6cdp"
+            app:number_of_dots="6" />
 
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/priceD"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="@dimen/_30cdp"
-            android:layout_marginTop="@dimen/_20cdp"
-            android:layout_marginRight="@dimen/_30cdp"
-
-
-            >
-
-
-            <TextView
-                android:id="@+id/details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_15cdp" />
-
-
-        </ScrollView>
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_60cdp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/cornecr_top"
-        >
 
         <RelativeLayout
-            android:id="@+id/v2"
+            android:id="@+id/v"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cartGo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/_40cdp"
+                android:layout_height="@dimen/_40cdp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/_50cdp"
+                android:layout_marginTop="@dimen/_50cdp"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="@dimen/_40cdp"
+                android:layout_height="@dimen/_40cdp"
+
+                android:layout_below="@+id/back"
+                android:layout_marginLeft="@dimen/_50cdp"
+                android:layout_marginTop="@dimen/_50cdp"
+
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_star_24"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/emptyStar"
+                android:layout_width="@dimen/_40cdp"
+                android:layout_height="@dimen/_40cdp"
+
+                android:layout_below="@+id/back"
+                android:layout_marginLeft="@dimen/_50cdp"
+                android:layout_marginTop="@dimen/_50cdp"
+
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_star_border_24"
+                android:visibility="invisible"
+
+
+                />
+
+
+            <ir.apend.slider.ui.Slider
+                android:id="@+id/picture"
+                android:layout_width="@dimen/_200cdp"
+                android:layout_height="@dimen/_300cdp"
+                android:layout_below="@id/nameD"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/_50cdp"
-                android:background="@drawable/corners_white"
-                android:backgroundTint="@color/white"
-                android:text="اضافه کردن به سبدخرید"
-                android:textColor="@color/main"
-                android:textSize="@dimen/_10cdp"
+
+                android:animateLayoutChanges="true"
+                app:animateIndicators="true"
+                app:defaultIndicators="dash"
+                app:indicatorSize="8dp"
+                app:intervalSecond="5"
+                app:loopSlides="true"
+
+
+                />
+
+            <TextView
+                android:id="@+id/nameD"
+                android:layout_width="@dimen/_200cdp"
+                android:layout_height="@dimen/_50cdp"
+                android:layout_alignParentRight="true"
+
+                android:background="@color/main"
+                android:gravity="center"
+                android:text="Titles"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_25cdp"
                 android:textStyle="bold" />
 
-            <androidx.appcompat.widget.AppCompatButton
+
+            <TextView
+                android:id="@+id/priceD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/_50cdp"
-                android:background="@drawable/corners_white"
-                android:text="نظر ها"
-                android:textColor="@color/main"
-                android:textSize="@dimen/_10cdp" />
+                android:layout_below="@id/picture"
+                android:layout_marginLeft="@dimen/_30cdp"
+                android:layout_marginTop="@dimen/_10cdp"
+                android:layout_marginRight="@dimen/_30cdp"
+                android:background="@color/main"
+                android:padding="@dimen/_5cdp"
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_30cdp"
+                android:textStyle="bold" />
+
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceD"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_30cdp"
+                android:layout_marginTop="@dimen/_20cdp"
+                android:layout_marginRight="@dimen/_30cdp"
+
+
+                >
+
+
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15cdp" />
+
+
+            </ScrollView>
 
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60cdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/cornecr_top"
+            >
 
+            <RelativeLayout
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible">
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cartGo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_50cdp"
+                    android:background="@drawable/corners_white"
+                    android:backgroundTint="@color/white"
+                    android:text="اضافه کردن به سبدخرید"
+                    android:textColor="@color/main"
+                    android:textSize="@dimen/_10cdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/comenty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_50cdp"
+                    android:background="@drawable/corners_white"
+                    android:text="نظر ها"
+                    android:textColor="@color/main"
+                    android:textSize="@dimen/_10cdp" />
+
+
+            </RelativeLayout>
 
 
     </RelativeLayout>
 
+    <FrameLayout
+        android:id="@+id/commentsD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+
+        >
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    </FrameLayout>
 
 </RelativeLayout>

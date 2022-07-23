@@ -9,12 +9,14 @@
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/circle.xml" value="0.22974358974358974" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/circle_white.xml" value="0.2328125" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/cornecr_top.xml" value="0.24074074074074073" />
+        <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/corner_top.xml" value="0.2484375" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/corners.xml" value="0.21979166666666666" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/corners_white.xml" value="0.24074074074074073" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.24074074074074073" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/imagecorners.xml" value="0.21979166666666666" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/plus.xml" value="0.2328125" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/puprow.xml" value="0.228125" />
+        <entry key="..\:/Work/02 Android/Store/app/src/main/res/drawable/white_corners_main.xml" value="0.228125" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/activity_cart.xml" value="0.2" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/activity_details.xml" value="0.2" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/activity_home.xml" value="0.176" />
@@ -25,8 +27,11 @@
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/activity_saves.xml" value="0.18432971014492755" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/activity_titels.xml" value="0.2" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/cart_row.xml" value="0.2" />
+        <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/comments_row.xml" value="0.23229166666666667" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/corners.xml" value="0.1897644927536232" />
+        <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/dialog_box.xml" value="0.23229166666666667" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/fragment_catalog.xml" value="0.16" />
+        <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/fragment_comments.xml" value="0.23229166666666667" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/fragment_dashboard.xml" value="0.19519927536231885" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Work/02 Android/Store/app/src/main/res/layout/fragment_notifications.xml" value="0.19519927536231885" />
@@ -46,5 +51,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
   </component>
 </project>

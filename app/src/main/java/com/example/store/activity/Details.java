@@ -1,14 +1,27 @@
 package com.example.store.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.transition.Fade;
+import androidx.transition.Transition;
+import androidx.transition.TransitionManager;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +32,10 @@ import com.example.store.adapter.ProductsAdapter;
 
 import com.example.store.database.SqlCards;
 import com.example.store.database.SqlDatabase;
+import com.example.store.databinding.ActivityDetailsBinding;
+import com.example.store.databinding.FragmentCommentsBinding;
+import com.example.store.fragment.CommentsFragment;
+import com.example.store.fragment.HomeFragment;
 import com.example.store.model.Products;
 
 import org.json.JSONArray;
@@ -28,6 +45,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import ir.apend.slider.model.Slide;
@@ -37,6 +55,9 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class Details extends AppCompatActivity {
+
+
+    private ActivityDetailsBinding binding;
 
 
     int id;
@@ -56,12 +77,31 @@ public class Details extends AppCompatActivity {
         TextView courseDuration = findViewById(R.id.details);
         TextView courseDescription = findViewById(R.id.nameD);
         Button cart = findViewById(R.id.cartGo);
+        Button com = findViewById(R.id.comenty);
+        FrameLayout frameLayout = findViewById(R.id.commentsD);
+        RelativeLayout layoutD = findViewById(R.id.layoutD);
+
 
         //find ID
         id = getIntent().getIntExtra("id", -1);
         new Refresh().execute();
 
+        //Dialog
+        Dialog d = new Dialog(this);
+        d.setContentView(R.layout.comments_row);
+
+
         //buttons
+        com.setOnClickListener(view15 -> {
+
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag("addDocument");
+            if (fragment == null) {
+                layoutD.setVisibility(View.VISIBLE);
+                replaceFragment(Details.this, R.id.commentsD, new CommentsFragment(), true, "addDocument");
+            }
+
+        });
+
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +115,7 @@ public class Details extends AppCompatActivity {
                 }
 
 
-                sqlCards.Insert(products.id, products.name, products.description, products.count, products.price ,products.price, products.img1);
+                sqlCards.Insert(products.id, products.name, products.description, products.count, products.price, products.price, products.img1);
                 ArrayList<Products> productslist = sqlCards.getData();
                 productslist = sqlCards.getData();
 
@@ -225,6 +265,40 @@ public class Details extends AppCompatActivity {
 
                 }
             }
+        }
+    }
+
+
+    public static void replaceFragment(FragmentActivity activity, int container, Fragment fragment, boolean addToBackStack, String tag) {
+        if (addToBackStack)
+            activity.getSupportFragmentManager().beginTransaction().replace(container, fragment).addToBackStack(tag).commit();
+
+        else
+            activity.getSupportFragmentManager().beginTransaction().replace(container, fragment).commit();
+
+
+    }
+
+    public void onBackPressed() {
+        FragmentManager fm = getSupportFragmentManager();
+        if (fm.getBackStackEntryAt(fm.getBackStackEntryCount() - 1).getName().equals("addDocument")) {
+            try {
+                CommentsFragment fragment = (CommentsFragment) getSupportFragmentManager().findFragmentById(R.id.commentsD);
+                Objects.requireNonNull(fragment).closeAction();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Do something after 5s = 5000ms
+                    Details.super.onBackPressed();
+                }
+            }, 300);
+
+
         }
     }
 }
