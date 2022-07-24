@@ -281,7 +281,7 @@ public class Details extends AppCompatActivity {
 
     public void onBackPressed() {
         FragmentManager fm = getSupportFragmentManager();
-        if (fm.getBackStackEntryAt(fm.getBackStackEntryCount() - 1).getName().equals("addDocument")) {
+//        if (fm.getBackStackEntryAt(fm.getBackStackEntryCount() - 1).getName().equals("addDocument")) {
             try {
                 CommentsFragment fragment = (CommentsFragment) getSupportFragmentManager().findFragmentById(R.id.commentsD);
                 Objects.requireNonNull(fragment).closeAction();
@@ -299,6 +299,6 @@ public class Details extends AppCompatActivity {
             }, 300);
 
 
-        }
+        //}
     }
 }
